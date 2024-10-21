@@ -1,0 +1,50 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    # services:
+    #   mysql:
+    #     image: mysql:5.7
+    #     env:
+    #       MYSQL_DATABASE: test_db
+    #       MYSQL_ROOT_PASSWORD: root
+    #     ports:
+    #       - 3306:3306
+    #     options: >-
+    #       --health-cmd="mysqladmin ping --silent"
+    #       --health-interval=10s
+    #       --health-timeout=5s
+    #       --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.18' # or any version you prefer
+
+      - name: Install dependencies
+        run: npm install
+
+      # - name: Start application
+      #   run: npm start & # Run your application in the background
+      #   env:
+      #     DATABASE_URL: mysql://root:root@localhost/test_db # adjust as necessary
+
+      # - name: Wait for application to start
+      #   run: npx wait-on http://localhost:3000 # adjust the URL and port as necessary
+
+      - name: Run Cypress tests
+        run: npx cypress run
