@@ -1,7 +1,6 @@
 name: Run Cypress Tests
 
 on:
-on:
   workflow_dispatch:
     inputs:
       branch:
