@@ -2,7 +2,7 @@
 
 ## 🔍 Overview
 
-This project contains automated tests for the DuckDuckGo search functionality using Cypress. The tests validate the search results and ensure the application behaves as expected when interacting with the UI elements.
+This project contains automated tests for the DuckDuckGo search functionality using Cypress. The tests validate the search results and ensure the application behaves as expected when interacting with the UI elements. There is also an additional API test that performs a GET request and checks information in the response.
 
 ## 📦 Features
 
@@ -28,19 +28,17 @@ Before running the tests, ensure you have the following installed:
 
     ```
     npm install
-
 ## 🏃 Running the Tests
 
-To open the Cypress Test Runner, use the following command:
-    ```
-    npx cypress open
+To open the Cypress Test Runner, use the following command: `npx cypress open`
 
 This will launch the Cypress GUI where you can run your tests interactively.
 
-To run tests headlessly in the terminal, use:
-    ```
-    npx cypress run
+To run tests headlessly in the terminal, use: `npx cypress run`
 
+## 🔄 Running the Tests in Github Actions
+
+This repository includes a GitHub Actions workflow that allows you to run tests conveniently. You can select which branch to run the tests from, ensuring flexibility in your development process. Simply navigate to the Actions tab in the GitHub interface, choose your desired branch, and trigger the workflow to execute the tests. This setup helps maintain code quality and integrates seamlessly into your CI/CD pipeline.
 
 ## 🗂️ Test Structure
 
@@ -50,6 +48,7 @@ The tests are organized in the `cypress/e2e` directory. Each test suite is defin
 1. DuckDuckGo Search Test
 - Verifies that searching for a term returns results containing that term.
 - Checks that there are more than 10 regions available in the dropdown filter.
+
 
 2. DuckDuckGo API Test
 - Performs a GET request and prints the Icon URL if it is present in the response.
