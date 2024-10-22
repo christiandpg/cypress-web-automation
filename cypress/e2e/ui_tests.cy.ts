@@ -1,5 +1,5 @@
-import HomePage from '../pageObjects/HomePage';
-import SearchResultPage from '../pageObjects/SearchResultPage';
+import HomePage from '../page-objects/home_page';
+import SearchResultPage from '../page-objects/search_result_page';
 
 describe('DuckDuckGo Search Test', { testIsolation: false }, () => {
   const homePage = new HomePage();

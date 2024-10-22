@@ -1,4 +1,4 @@
-import SearchResultPage from "./SearchResultPage";
+import SearchResultPage from "./search_result_page";
 
 class HomePage {
   visit() {
