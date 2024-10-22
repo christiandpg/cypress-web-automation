@@ -1,5 +1,5 @@
 # 🧪 Cypress Web & API tests
-
+[![CI](https://github.com/christiandpg/cypress-web-automation/actions/workflows/cypress.yml/badge.svg?branch=main)](https://github.com/christiandpg/cypress-web-automation/actions/workflows/cypress.yml)
 ## 🔍 Overview
 
 This project contains automated tests for the DuckDuckGo search functionality using Cypress. The tests validate the search results and ensure the application behaves as expected when interacting with the UI elements. There is also an additional API test that performs a GET request and checks information in the response.
