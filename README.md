@@ -36,6 +36,8 @@ This will launch the Cypress GUI where you can run your tests interactively.
 
 To run tests headlessly in the terminal, use: `npx cypress run`
 
+![Cypress Tests](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMm05NzU1b2tqMzgydTB2eWlpZWdkc3l0c2xjdmZlYXpocnB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KNz7hiGVf7aEt9XNK5/giphy.gif)
+
 ## 🔄 Running the Tests in Github Actions
 
 This repository includes a GitHub Actions workflow that allows you to run tests conveniently. You can select which branch to run the tests from, ensuring flexibility in your development process. Simply navigate to the Actions tab in the GitHub interface, choose your desired branch, and trigger the workflow to execute the tests. This setup helps maintain code quality and integrates seamlessly into your CI/CD pipeline.
