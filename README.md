@@ -2,12 +2,12 @@
 [![CI](https://github.com/christiandpg/cypress-web-automation/actions/workflows/cypress.yml/badge.svg?branch=main)](https://github.com/christiandpg/cypress-web-automation/actions/workflows/cypress.yml)
 ## 🔍 Overview
 
-This project contains automated tests for the DuckDuckGo search functionality using Cypress. The tests validate the search results and ensure the application behaves as expected when interacting with the UI elements. There is also an additional API test that performs a GET request and checks information in the response.
+This project contains automated tests for the SaudeDemo checkout functionality using Cypress. The adds a random product to the cart and performs the checkout, ensuring the application behaves as expected when interacting with the UI elements. There is also an additional API test that performs a GET request and checks information in the response.
 
 ## 📦 Features
 
-- **Search Functionality**: Tests the search capability of DuckDuckGo and verifies that results contain the expected search term.
-- **Region Filtering**: Validates the region filter dropdown and checks that there are sufficient options available.
+- **Add to Cart Functionality**: Tests the capability of SauceDemo to add a product to the cart.
+- **Complete the Checkout Functionality**: Validates the checkout works as expected.
 
 ## 🛠️ Prerequisites
 
@@ -47,9 +47,9 @@ This repository includes a GitHub Actions workflow that allows you to run tests 
 The tests are organized in the `cypress/e2e` directory. Each test suite is defined in a separate file for better organization and maintainability.
 
 ### Example Test Cases
-1. DuckDuckGo Search Test
-- Verifies that searching for a term returns results containing that term.
-- Checks that there are more than 10 regions available in the dropdown filter.
+1. SauceDemo UI Test
+- Perform login and verifies that adding a product to the cart behaves as expected.
+- Checks that the user can finalize the checkout flow.
 
 
 2. DuckDuckGo API Test

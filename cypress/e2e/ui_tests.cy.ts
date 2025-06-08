@@ -1,26 +1,36 @@
 import HomePage from '../page-objects/home_page';
-import SearchResultPage from '../page-objects/search_result_page';
+import LoginPage from '../page-objects/login_page';
 
 describe('DuckDuckGo Search Test', { testIsolation: false }, () => {
+  const loginPage = new LoginPage();
   const homePage = new HomePage();
-  const searchResultPage = new SearchResultPage();
 
   before(() => {
-    homePage.visit();
+    cy.clearCookies();
+    cy.clearLocalStorage();
+    loginPage.visit();
   });
 
-  it('Test Case 1: should search and verify all result titles contain the search term', () => {
-    cy.fixture('firstTestCase').then((searchString) => {
+  it('Test Case 1: perform login', () => {
+    cy.fixture('firstTestCase').then((login_string) => {
+      loginPage
+        .login(login_string.username, login_string.password)
+        .verifyLogin();
+    })
+  });
+
+  it('Test Case 2: add random product to the cart and checkout', () => {
+    cy.fixture('secondTestCase').then((user_info) => {
       homePage
-      .searchFor(searchString.term)
-      .verifyTitlesContain(searchString.term);
-    })    
-  });
-
-  it('Test Case 2: should open the region filter and verify the total count of regions', () => {
-    searchResultPage
-      .openRegionFilter()
-      .assertRegionsCount();
+        .addRandomProductToCart()
+        .verifyRemoveButtonExists()
+        .goToCart()
+        .clickCheckoutButton()
+        .fillInUserInformation(user_info.firstName, user_info.lastName, user_info.zip)
+        .clickContinueButton()
+        .clickOnFinish()
+        .verifyOrderComplete();
+      });
   });
 
 });
