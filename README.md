@@ -36,7 +36,7 @@ This will launch the Cypress GUI where you can run your tests interactively.
 
 To run tests headlessly in the terminal, use: `npx cypress run`
 
-![Cypress Tests](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMm05NzU1b2tqMzgydTB2eWlpZWdkc3l0c2xjdmZlYXpocnB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KNz7hiGVf7aEt9XNK5/giphy.gif)
+![Cypress Tests](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmIyczVzYjhzZ25pbXoxOXVhY2hiYjd0Y3dyOWJxNWJsM2N3bXE3bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qNeUOyrnSdaFDTnDN/giphy.gif)
 
 ## 🔄 Running the Tests in Github Actions
 
